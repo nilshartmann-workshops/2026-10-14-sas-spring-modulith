@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+.vscode/
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Die H2-Datenbank der Anwendung
+data/

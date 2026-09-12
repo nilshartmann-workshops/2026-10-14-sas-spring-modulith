@@ -1,0 +1,18 @@
+name: sas-plantify
+
+# Postgres brauchen wir nur fuer die Vorfuehrungen. Ohne Profil laeuft die
+# Anwendung auf H2 und braucht keinen Container.
+#
+# Starten:        docker compose up -d
+# Zuruecksetzen:  ./restart-docker.sh
+# Anwendung:      SPRING_PROFILES_ACTIVE=postgres ./mvnw spring-boot:run
+services:
+  postgres:
+    container_name: sas-plantify-postgres
+    image: postgres:18
+    environment:
+      POSTGRES_DB: plantify
+      POSTGRES_USER: plantify
+      POSTGRES_PASSWORD: plantify
+    ports:
+      - "5432:5432"

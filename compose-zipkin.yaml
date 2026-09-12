@@ -1,0 +1,12 @@
+name: sas-plantify-zipkin
+
+# Zipkin brauchen wir nur fuer die Vorfuehrung zum Tracing.
+#
+# Starten:  docker compose -f compose-zipkin.yaml up -d
+# Ansehen:  http://localhost:9411
+services:
+  zipkin:
+    container_name: sas-plantify-zipkin
+    image: openzipkin/zipkin:3
+    ports:
+      - "9411:9411"
